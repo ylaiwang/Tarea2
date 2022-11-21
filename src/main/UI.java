@@ -101,7 +101,7 @@ public class UI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Button_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_SalirActionPerformed
-   
+        System.exit(0);
     }//GEN-LAST:event_Button_SalirActionPerformed
 
     private void NombreVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreVendedorActionPerformed

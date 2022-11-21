@@ -33,6 +33,24 @@ public class UI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         CMB_Productos = new javax.swing.JComboBox<>();
         Button_Salir = new javax.swing.JToggleButton();
+        Button_Guardar = new javax.swing.JToggleButton();
+        imagen_COD = new javax.swing.JLabel();
+        Precio_COD = new javax.swing.JTextField();
+        imagen_MC = new javax.swing.JLabel();
+        Precio_MC = new javax.swing.JTextField();
+        imagen_Fortnite = new javax.swing.JLabel();
+        Precio_Fortnite = new javax.swing.JTextField();
+        CantidadDeCadaProducto = new javax.swing.JTextField();
+        Venta_Pesos = new javax.swing.JLabel();
+        Pesos_COD = new javax.swing.JTextField();
+        Pesos_MC = new javax.swing.JTextField();
+        Pesos_Fortnite = new javax.swing.JTextField();
+        Comision_Vendedor = new javax.swing.JLabel();
+        ComisionVendedor = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        NomVendedorMVP = new javax.swing.JTextField();
+        ComisionDelMVP = new javax.swing.JLabel();
+        ComisionMVP = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -61,6 +79,75 @@ public class UI extends javax.swing.JFrame {
             }
         });
 
+        Button_Guardar.setText("Guardar");
+
+        imagen_COD.setText("jLabel3");
+
+        Precio_COD.setText("$34500");
+        Precio_COD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Precio_CODActionPerformed(evt);
+            }
+        });
+        Precio_COD.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Precio_CODKeyTyped(evt);
+            }
+        });
+
+        imagen_MC.setText("jLabel3");
+
+        Precio_MC.setText("$8800");
+        Precio_MC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Precio_MCActionPerformed(evt);
+            }
+        });
+        Precio_MC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Precio_MCKeyTyped(evt);
+            }
+        });
+
+        imagen_Fortnite.setText("jLabel3");
+
+        Precio_Fortnite.setText("$58200");
+        Precio_Fortnite.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Precio_FortniteActionPerformed(evt);
+            }
+        });
+        Precio_Fortnite.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Precio_FortniteKeyTyped(evt);
+            }
+        });
+
+        CantidadDeCadaProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CantidadDeCadaProductoActionPerformed(evt);
+            }
+        });
+
+        Venta_Pesos.setText("Pesos");
+
+        Comision_Vendedor.setText("Comision que gana el vendedor");
+
+        jLabel3.setText("Vendedor con más ventas(MVP):");
+
+        NomVendedorMVP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NomVendedorMVPActionPerformed(evt);
+            }
+        });
+        NomVendedorMVP.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                NomVendedorMVPKeyTyped(evt);
+            }
+        });
+
+        ComisionDelMVP.setText("Comision ganada");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -68,35 +155,115 @@ public class UI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Button_Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Button_Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(58, 58, 58))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(CMB_Productos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(NombreVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(323, 624, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(Button_Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(58, 58, 58))))
+                                    .addComponent(NombreVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                    .addComponent(CMB_Productos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(CantidadDeCadaProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(Precio_COD, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(Precio_MC, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(12, 12, 12)
+                                                        .addComponent(imagen_COD, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(imagen_MC, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(Venta_Pesos)
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addComponent(ComisionVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                            .addComponent(Comision_Vendedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                                .addComponent(Pesos_COD, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(30, 30, 30)
+                                                                .addComponent(Pesos_MC, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(12, 12, 12)
+                                                        .addComponent(imagen_Fortnite, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(18, 18, 18)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                            .addComponent(Pesos_Fortnite, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(Precio_Fortnite, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
+                                .addGap(151, 151, 151)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(NomVendedorMVP, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ComisionDelMVP, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ComisionMVP, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(160, 160, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(NombreVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CMB_Productos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 349, Short.MAX_VALUE)
-                .addComponent(Button_Salir)
-                .addGap(28, 28, 28))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(NombreVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(CMB_Productos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CantidadDeCadaProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(imagen_COD, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(imagen_MC, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(imagen_Fortnite, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Precio_COD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Precio_MC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Precio_Fortnite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(33, 33, 33)
+                        .addComponent(Venta_Pesos)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Pesos_COD, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Pesos_MC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Pesos_Fortnite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39)
+                        .addComponent(Comision_Vendedor)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ComisionVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Button_Salir)
+                            .addComponent(Button_Guardar))
+                        .addGap(28, 28, 28))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(NomVendedorMVP, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ComisionDelMVP, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ComisionMVP, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
@@ -117,6 +284,46 @@ public class UI extends javax.swing.JFrame {
         if ((c<'a'|| c>'z') && (c<'A' ||c>'Z') && (c<' '|| c>' '))evt.consume();
         
     }//GEN-LAST:event_NombreVendedorKeyTyped
+
+    private void Precio_MCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Precio_MCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Precio_MCActionPerformed
+
+    private void Precio_FortniteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Precio_FortniteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Precio_FortniteActionPerformed
+
+    private void Precio_CODActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Precio_CODActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Precio_CODActionPerformed
+
+    private void CantidadDeCadaProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CantidadDeCadaProductoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CantidadDeCadaProductoActionPerformed
+
+    private void NomVendedorMVPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomVendedorMVPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NomVendedorMVPActionPerformed
+
+    private void NomVendedorMVPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NomVendedorMVPKeyTyped
+         char c = evt.getKeyChar();
+        if ((c<'a'|| c>'z') && (c<'A' ||c>'Z') && (c<' '|| c>' '))evt.consume();
+    }//GEN-LAST:event_NomVendedorMVPKeyTyped
+
+    private void Precio_CODKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Precio_CODKeyTyped
+        char c = evt.getKeyChar();
+        if (c<'0'|| c>'9') evt.consume();
+    }//GEN-LAST:event_Precio_CODKeyTyped
+
+    private void Precio_MCKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Precio_MCKeyTyped
+         char c = evt.getKeyChar();
+        if (c<'0'|| c>'9') evt.consume();
+    }//GEN-LAST:event_Precio_MCKeyTyped
+
+    private void Precio_FortniteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Precio_FortniteKeyTyped
+         char c = evt.getKeyChar();
+        if (c<'0'|| c>'9') evt.consume();
+    }//GEN-LAST:event_Precio_FortniteKeyTyped
 
     /**
      * @param args the command line arguments
@@ -154,10 +361,28 @@ public class UI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton Button_Guardar;
     private javax.swing.JToggleButton Button_Salir;
     private javax.swing.JComboBox<String> CMB_Productos;
+    private javax.swing.JTextField CantidadDeCadaProducto;
+    private javax.swing.JLabel ComisionDelMVP;
+    private javax.swing.JTextField ComisionMVP;
+    private javax.swing.JTextField ComisionVendedor;
+    private javax.swing.JLabel Comision_Vendedor;
+    private javax.swing.JTextField NomVendedorMVP;
     private javax.swing.JTextField NombreVendedor;
+    private javax.swing.JTextField Pesos_COD;
+    private javax.swing.JTextField Pesos_Fortnite;
+    private javax.swing.JTextField Pesos_MC;
+    private javax.swing.JTextField Precio_COD;
+    private javax.swing.JTextField Precio_Fortnite;
+    private javax.swing.JTextField Precio_MC;
+    private javax.swing.JLabel Venta_Pesos;
+    private javax.swing.JLabel imagen_COD;
+    private javax.swing.JLabel imagen_Fortnite;
+    private javax.swing.JLabel imagen_MC;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

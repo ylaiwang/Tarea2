@@ -101,6 +101,7 @@ public class UI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Button_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_SalirActionPerformed
+        // con esto cerramos el programa con el boton salir
         System.exit(0);
     }//GEN-LAST:event_Button_SalirActionPerformed
 

@@ -143,15 +143,15 @@
                       <Component id="Venta_Pesos" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="Pesos_COD" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                          <Component id="Pesos_MC" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Pesos_Fortnite" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Pesos_COD" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="Pesos_MC" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="Pesos_Fortnite" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="Comision_Vendedor" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="ComisionVendedor" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="53" max="32767" attributes="0"/>
+                      <EmptySpace pref="44" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="Button_Salir" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="Button_Guardar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -272,10 +272,28 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="Pesos_COD">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="$"/>
+      </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Pesos_CODKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="Pesos_MC">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="$"/>
+      </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Pesos_MCKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="Pesos_Fortnite">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="$"/>
+      </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Pesos_FortniteKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="Comision_Vendedor">
       <Properties>

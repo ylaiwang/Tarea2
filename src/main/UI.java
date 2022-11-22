@@ -4,19 +4,39 @@
  */
 package main;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 /**
  *
  * @author Yin
  */
 public class UI extends javax.swing.JFrame {
 
-    /**
-     * Creates new form UI
-     */
+    private ImageIcon imagen;
+    private Icon icono;
     public UI() {
         initComponents();
         this.setTitle("Ventas de juegos");
         this.setLocation(400, 220);
+        this.SetLocationRelativeTo(this);
+        
+        this.SetImagenProducto(this.imagen, "src/imagenes/");
+    }
+    
+    private void SetImagenProducto(ImageIcon lbl, String ruta){
+        this.imagen = new ImageIcon(ruta);
+        this.icono = new ImageIcon(this.imagen.getImage().getScaledInstance(
+                lbl.getWidth(),
+                lbl.getHeight(),
+                Image.SCALE_DEFAULT
+        )
+        
+        );
+        lbl.setIcon(this.icono);
+        this.repaint();
+        
     }
 
     /**
@@ -131,6 +151,27 @@ public class UI extends javax.swing.JFrame {
 
         Venta_Pesos.setText("Pesos");
 
+        Pesos_COD.setText("$");
+        Pesos_COD.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Pesos_CODKeyTyped(evt);
+            }
+        });
+
+        Pesos_MC.setText("$");
+        Pesos_MC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Pesos_MCKeyTyped(evt);
+            }
+        });
+
+        Pesos_Fortnite.setText("$");
+        Pesos_Fortnite.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Pesos_FortniteKeyTyped(evt);
+            }
+        });
+
         Comision_Vendedor.setText("Comision que gana el vendedor");
 
         jLabel3.setText("Vendedor con más ventas(MVP):");
@@ -242,14 +283,14 @@ public class UI extends javax.swing.JFrame {
                         .addComponent(Venta_Pesos)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Pesos_COD, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Pesos_MC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Pesos_Fortnite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Pesos_COD, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Pesos_MC, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Pesos_Fortnite, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(39, 39, 39)
                         .addComponent(Comision_Vendedor)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ComisionVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Button_Salir)
                             .addComponent(Button_Guardar))
@@ -325,6 +366,21 @@ public class UI extends javax.swing.JFrame {
         if (c<'0'|| c>'9') evt.consume();
     }//GEN-LAST:event_Precio_FortniteKeyTyped
 
+    private void Pesos_CODKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Pesos_CODKeyTyped
+       char c = evt.getKeyChar();
+        if (c<'0'|| c>'9') evt.consume();
+    }//GEN-LAST:event_Pesos_CODKeyTyped
+
+    private void Pesos_MCKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Pesos_MCKeyTyped
+       char c = evt.getKeyChar();
+        if (c<'0'|| c>'9') evt.consume();
+    }//GEN-LAST:event_Pesos_MCKeyTyped
+
+    private void Pesos_FortniteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Pesos_FortniteKeyTyped
+       char c = evt.getKeyChar();
+        if (c<'0'|| c>'9') evt.consume();
+    }//GEN-LAST:event_Pesos_FortniteKeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -385,4 +441,8 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
+
+    private void SetLocationRelativeTo(UI aThis) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

@@ -1,22 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package main;
 
-/**
- *
- * @author Yin
- */
+import BaseDatos.Conexion;
+
+
 public class Main {
     public static void main(String[] args){
-        System.out.println("heloow");
+        System.out.println("Probar si se conecta");
         
-    
-    
-    
-    
-    
+        Conexion date = new Conexion();
+        date.getConnection();
     
     }
     

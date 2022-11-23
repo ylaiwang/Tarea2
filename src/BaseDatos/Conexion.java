@@ -15,7 +15,7 @@ public class Conexion {
     // datos para acceder a la base de datos
     private static final String user = "root";
     private static final String password = "";
-    private static final String url = "jdbc:mysql://localhost:3306/tienda";
+    private static final String url = "jdbc:mysql://localhost:3306/tiendajuegos";
     private static final String driver = "com.mysql.cj.jdbc.Driver";
     
     public Connection getConnection(){
@@ -34,7 +34,6 @@ public class Conexion {
         }
         return null;
     }
-    
     
     
     public void cerrar(){
